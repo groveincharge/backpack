@@ -1,0 +1,1 @@
+This is my detail project with a node and mongo backend and a react frontend.
