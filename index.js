@@ -98,9 +98,6 @@ passport.deserializeUser(function(id, done) {
        });
      });
 
-
-app.use(express.static('public'))
-
 //Middleware to see how the params are populated by Passport
 let count = 1
 
