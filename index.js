@@ -16,6 +16,7 @@ const User = db.User;
 
 // user routes
 const homeRoute = require('./routes/user/Home')
+const appointmentRoute = require('./routes/appointment/MakeAppointment')
 const registerRoute = require('./routes/user/Register')
 const loginRoute = require('./routes/user/Login')
 const dashBoardRoute = require('./routes/user/DashBoard')
@@ -130,8 +131,8 @@ app.use('/login', loginRoute)
 app.use('/dashboard', dashBoardRoute)
 app.use('/users', getAllUsersRoute)
 app.use('/logout', logoutRoute)
-
 app.use('/comment', addCommentRoute)
+app.use('/appointment', appointmentRoute)
 
 app.use(printData) //user printData function as middleware to print populated variables
 app.use(errorHandler)

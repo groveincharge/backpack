@@ -31,5 +31,6 @@ process.on('SIGINT', () => {
 
 module.exports = {
     User: require('./../models/Register'),
-    Comment: require('./../models/Comment')
+    Comment: require('./../models/Comment'),
+    Appointment: require('./../models/Appointment')
       }
