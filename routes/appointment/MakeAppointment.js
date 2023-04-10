@@ -6,12 +6,14 @@ const AppointmentInfo = db.Appointment;
 const bcrypt = require('bcrypt');
 
 router.post('/', (req, res, next) => {
+
+  console.log(req.body)
     
 
      const {user, phone, street, city, state, zipcode, appointment} = req.body;
 
      const myAppointment = new AppointmentInfo({
-                                       user,
+                                       user_id: user,
                                        phone,
                                        street,
                                        city,
@@ -41,7 +43,7 @@ router.post('/', (req, res, next) => {
         .then(result => {
          console.log(result);
            res.status(200).json({
-               message: 'user List.',
+               message: 'appointment List.',
                count: result.length,
                Appointments: result.map(doc => {
            return{
@@ -51,7 +53,7 @@ router.post('/', (req, res, next) => {
                _id: doc._id,
                   request: {
                       type: 'GET',
-                      url: 'http://localhost:4000/makeAppointment/' + doc._id
+                      url: 'https://bossdetail-api.onrender.com/makeAppointment/' + doc._id
                   }
             }
           })

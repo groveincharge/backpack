@@ -43,4 +43,4 @@ const appointmentSchema = mongoose.Schema({
 
      appointmentSchema.set('toJSON', { virtuals: true });
 
-     module.exports = mongoose.model('Address', appointmentSchema);
+     module.exports = mongoose.model('Residense', appointmentSchema);
